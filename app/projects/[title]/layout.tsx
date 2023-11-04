@@ -1,4 +1,4 @@
-import MdxLayout from "@/app/components/mdx-layout";
+import MdxLayout from "@/components/mdx-layout";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <MdxLayout>{children}</MdxLayout>;
