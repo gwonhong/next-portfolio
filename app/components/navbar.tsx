@@ -27,9 +27,6 @@ export default function Navbar() {
               <NavItem text="Home" path="/" />
             </li>
             <li>
-              <NavItem text="About" path="/about" />
-            </li>
-            <li>
               <NavItem text="Gallery" path="/gallery" />
             </li>
             <li>
