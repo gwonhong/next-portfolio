@@ -22,17 +22,11 @@ export default function Navbar() {
     <div className="w-full h-20 bg-sky-600 sticky top-0">
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
-          <ul className="hidden md:flex gap-x-6">
-            <li>
-              <NavItem text="Home" path="/" />
-            </li>
-            <li>
-              <NavItem text="Projects" path="/projects" />
-            </li>
-            <li>
-              <NavItem text="Chart" path="/chart" />
-            </li>
-          </ul>
+          <nav className="md:flex gap-x-6">
+            <NavItem text="Home" path="/" />
+            <NavItem text="Projects" path="/projects" />
+            <NavItem text="Chart" path="/chart" />
+          </nav>
         </div>
       </div>
     </div>
