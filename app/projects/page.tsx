@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getPostByName, getAllPostsMeta } from "@/api/mdx";
+import { getAllPostsMeta } from "@/api/mdx";
 
 function PostPreviewBlock({
   meta,
@@ -16,17 +16,23 @@ function PostPreviewBlock({
     );
   }
   return (
-    <div>
-      <p>{meta.name}</p>
+    <Link href={`projects/${meta.name}`} className="p-8 rounded-md shadow-md">
+      <h3 className="text-xl font-semibold">{meta.name}</h3>
       {frontmatterLines}
-    </div>
+    </Link>
   );
 }
 
 export default async function Projects() {
   const metas = await getAllPostsMeta();
-  const previewBlocks = metas.map((meta, i) => {
-    return <PostPreviewBlock key={i} meta={meta} />;
-  });
-  return <div>{previewBlocks}</div>;
+  return (
+    <div className="container">
+      <h1 className="text-2xl font-bold">All Projects</h1>
+      <div className="flex gap-6 mt-6">
+        {metas.map((meta, i) => {
+          return <PostPreviewBlock key={i} meta={meta} />;
+        })}
+      </div>
+    </div>
+  );
 }
