@@ -1,3 +1,3 @@
 export default function Projects() {
-  return <div>gallery</div>;
+  return <div>projects</div>;
 }
