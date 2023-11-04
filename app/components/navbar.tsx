@@ -1,12 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-
-// function Logo() {
-//   return <Image src="/logo.png" alt="logo" fill />;
-// }
 
 function NavItem({ text, path }: { text: string; path: string }) {
   let pathname = usePathname() || "/";
@@ -23,7 +18,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
           <nav className="md:flex gap-x-6">
-            <NavItem text="Home" path="/" />
+            <NavItem text="Home" path="/home" />
             <NavItem text="Projects" path="/projects" />
             <NavItem text="Chart" path="/chart" />
           </nav>
