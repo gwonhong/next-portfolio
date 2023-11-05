@@ -1,4 +1,4 @@
-import { getPostByName } from "@/api/mdx";
+import { getPostByName } from "@/app/api/mdx";
 
 export default async function Projects({
   params,

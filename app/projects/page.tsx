@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPostsMeta } from "@/api/mdx";
+import { getAllPostsMeta } from "@/app/api/mdx";
 
 function PostPreviewBlock({
   meta,

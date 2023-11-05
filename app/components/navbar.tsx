@@ -15,7 +15,7 @@ function NavItem({ text, path }: { text: string; path: string }) {
 export default function Navbar() {
   return (
     <div className="w-full h-20 bg-sky-600 sticky top-0">
-      <div className="container mx-auto px-12 h-full">
+      <div className="container px-12 h-full">
         <div className="flex justify-between items-center h-full">
           <nav className="md:flex gap-x-6 font-bold">
             <NavItem text="Home" path="/home" />
