@@ -11,7 +11,6 @@ export default async function LineChartPage({
   const data = await getPopulationByYearRange(start, end);
   return (
     <div>
-      <Link href="/chart">return</Link>
       <LineChart data={data} />
     </div>
   );
