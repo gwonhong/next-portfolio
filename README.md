@@ -16,4 +16,13 @@ Each project page is also written in mdx syntax, and rendered using [next-mdx-re
 
 ### Chart
 
-WIP
+Visualizes Korea's population projection with various options.
+
+- Data Source: [통계청,「장래인구추계」, 2070, 2023.11.05, 성 및 연령별 추계인구(1세별, 5세별) / 전국](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1BPA001&conn_path=I2)
+
+- Used [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres) for DB.
+
+#### Options
+
+1. Changes in the total/male/female and specific age range population
+2. Distribution of each age range in the total/male/female population
