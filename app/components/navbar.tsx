@@ -14,15 +14,14 @@ function NavItem({ text, path }: { text: string; path: string }) {
 }
 export default function Navbar() {
   return (
-    <div className="w-full h-20 bg-sky-600 sticky top-0">
-      <div className="container px-12 h-full">
-        <div className="flex justify-between items-center h-full">
-          <nav className="md:flex gap-x-6 font-bold">
-            <NavItem text="Home" path="/home" />
-            <NavItem text="Projects" path="/projects" />
-            <NavItem text="Chart" path="/chart" />
-          </nav>
-        </div>
+    <div className="w-full bg-sky-600 px-12 h-20">
+      <div className="flex items-center h-full font-bold">
+        <nav className="flex gap-6">
+          <span className="text-xl">Gwon Hong&apos;s Portfolio</span>
+          <NavItem text="Home" path="/home" />
+          <NavItem text="Projects" path="/projects" />
+          <NavItem text="Chart" path="/chart" />
+        </nav>
       </div>
     </div>
   );
