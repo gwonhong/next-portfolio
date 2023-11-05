@@ -24,7 +24,7 @@ export default function ChartPage() {
         Start Year:{" "}
         <input
           type="number"
-          value={1960}
+          value={start}
           onChange={(e) => {
             setStart(parseInt(e.target.value));
           }}
@@ -34,7 +34,7 @@ export default function ChartPage() {
         End Year:{" "}
         <input
           type="number"
-          value="2022"
+          value={end}
           onChange={(e) => {
             setEnd(parseInt(e.target.value));
           }}
@@ -47,6 +47,7 @@ export default function ChartPage() {
           if (isValid) router.push(`/line-chart/${start}-${end}`);
           else {
             setIsWrong(true);
+            console.log(isWrong);
           }
         }}
       >
