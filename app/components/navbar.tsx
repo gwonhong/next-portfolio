@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <div className="w-full bg-sky-600 px-12 h-20">
       <div className="flex items-center h-full font-bold">
+      <span className="text-xl mr-6">Gwon Hong&apos;s Portfolio</span>
         <nav className="flex gap-6">
-          <span className="text-xl">Gwon Hong&apos;s Portfolio</span>
           <NavItem text="Home" path="/home" />
           <NavItem text="Projects" path="/projects" />
           <NavItem text="Chart" path="/chart" />
