@@ -1,3 +1,10 @@
-export default function Projects({ params }: { params: { title: string } }) {
-  return <div>{params.title}</div>;
+import { getPostByName } from "@/api/mdx";
+
+export default async function Projects({
+  params,
+}: {
+  params: { title: string };
+}) {
+  const { content } = await getPostByName(params.title);
+  return <div>{content}</div>;
 }
