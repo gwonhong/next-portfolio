@@ -26,13 +26,13 @@ function PostPreviewBlock({
 export default async function Projects() {
   const metas = await getAllPostsMeta();
   return (
-    <div className="container">
+    <>
       <h1 className="text-2xl font-bold">All Projects</h1>
       <div className="flex gap-6 mt-6">
         {metas.map((meta, i) => {
           return <PostPreviewBlock key={i} meta={meta} />;
         })}
       </div>
-    </div>
+    </>
   );
 }
