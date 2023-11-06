@@ -9,10 +9,5 @@ export default async function LineChartPage({
 }) {
   const [start, end] = params.range.split("-").map((str) => parseInt(str));
   const data = await getPopulationByYearRange(start, end);
-  return (
-    <>
-      <ReturnButton href="/chart" />
-      <LineChart data={data} />
-    </>
-  );
+  return <LineChart data={data} />;
 }
