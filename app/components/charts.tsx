@@ -4,9 +4,11 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  Tooltip,
   PointElement,
   LineElement,
+  Title,
+  Tooltip,
+  Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -16,7 +18,9 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Tooltip
+  Title,
+  Tooltip,
+  Legend
 );
 
 const options = {
