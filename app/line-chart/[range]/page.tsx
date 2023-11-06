@@ -1,6 +1,6 @@
+import ReturnButton from "@/app/components/return-button";
 import { getPopulationByYearRange } from "@/app/api/chart-data";
 import { LineChart } from "@/app/components/charts";
-import Link from "next/link";
 
 export default async function LineChartPage({
   params,
@@ -10,6 +10,9 @@ export default async function LineChartPage({
   const [start, end] = params.range.split("-").map((str) => parseInt(str));
   const data = await getPopulationByYearRange(start, end);
   return (
+    <>
+      <ReturnButton href="/chart" />
       <LineChart data={data} />
+    </>
   );
 }

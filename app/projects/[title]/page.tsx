@@ -1,3 +1,4 @@
+import MdxLayout from "@/app/components/mdx-layout";
 import { getPostByName } from "@/app/api/mdx";
 
 export default async function Projects({
@@ -6,5 +7,5 @@ export default async function Projects({
   params: { title: string };
 }) {
   const { content } = await getPostByName(params.title);
-  return <div>{content}</div>;
+  return <MdxLayout>{content}</MdxLayout>;
 }
