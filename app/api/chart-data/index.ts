@@ -2,12 +2,6 @@
 
 import { sql } from "@vercel/postgres";
 
-const COLORS = {
-    red: "rgb(255, 0, 0)",
-    green: "rgb(0, 255, 0)",
-    blue: "rgb(0, 0, 255)",
-};
-
 export async function getPopulationByYearRange(start: number, end: number) {
     const males = [];
     const females = [];
@@ -32,8 +26,10 @@ export async function getPopulationByYearRange(start: number, end: number) {
     }
     return {
         labels,
-        datasets: [{ label: "Total", data: totals, borderColor: COLORS.green, backgroundColor: COLORS.green },
-        { label: "Male", data: males, borderColor: COLORS.blue, backgroundColor: COLORS.blue },
-        { label: "Female", data: females, borderColor: COLORS.red, backgroundColor: COLORS.red }],
+        datasets: [
+            { label: "Total", data: totals, borderColor: "rgb(0, 255, 0)", backgroundColor: "rgba(0, 255, 0, 0.5)" },
+            { label: "Male", data: males, borderColor: "rgb(0, 0, 255)", backgroundColor: "rgba(0, 0, 255, 0.5)" },
+            { label: "Female", data: females, borderColor: "rgb(255, 0, 0)", backgroundColor: "rgba(255, 0, 0, 0.5)" },
+        ],
     };
 }
