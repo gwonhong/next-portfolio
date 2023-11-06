@@ -33,6 +33,7 @@ const options = {
     title: {
       display: true,
       text: "Population Line Chart",
+      font: { size: 18 },
     },
   },
 };
