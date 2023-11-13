@@ -6,19 +6,22 @@ function PostPreviewBlock({
 }: {
   meta: { name: string; frontmatter: Record<string, unknown> };
 }) {
-  const frontmatterLines = [];
-  for (const key in meta.frontmatter) {
-    const value = meta.frontmatter[key];
-    frontmatterLines.push(
-      <p key={key}>
-        {key}: {value as string}
-      </p>
-    );
-  }
+  // const frontmatterLines = [];
+  // for (const key in meta.frontmatter) {
+  //   const value = meta.frontmatter[key];
+  //   frontmatterLines.push(
+  //     <p key={key}>
+  //       {key}: {value as string}
+  //     </p>
+  //   );
+  // }
   return (
     <Link href={`projects/${meta.name}`} className="p-8 rounded-md shadow-md">
-      <h3 className="text-xl font-semibold">{meta.name}</h3>
-      {frontmatterLines}
+      <h2 className="text-xl font-semibold">{meta.name}</h2>
+      {/* {frontmatterLines} */}
+      {"title" in meta.frontmatter ? (
+        <h3 className="text-lg">{meta.frontmatter["title"] as string}</h3>
+      ) : null}
     </Link>
   );
 }
