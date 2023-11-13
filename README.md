@@ -19,8 +19,8 @@ Each project page is also written in mdx syntax, and rendered using [next-mdx-re
 Visualizes Korea's population projection with various options.
 
 - Data Source: [통계청,「장래인구추계」, 2070, 2023.11.05, 성 및 연령별 추계인구(1세별, 5세별) / 전국](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1BPA001&conn_path=I2)
-
 - Used [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres) for DB.
+- Visualized using [react-chartjs-2](https://react-chartjs-2.js.org).
 
 #### Options
 
